@@ -1,0 +1,56 @@
+# .gitignore
+
+# C#/.NET
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.suo
+*.user
+.vs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# AI Model files
+ai_module/model/*.pkl
+ai_module/model/*.joblib
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+
+# Environment
+.env
+.env.local

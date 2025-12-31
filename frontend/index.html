@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏢 智慧建築エネルギーダッシュボード</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Chart.js for visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-content">
+            <h1>🏢 智慧建築エネルギーダッシュボード</h1>
+            <p class="subtitle">Smart Building Energy Management System</p>
+        </div>
+        <div class="header-time">
+            <span id="currentTime"></span>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="dashboard">
+        <!-- 統計カード -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-content">
+                    <h3>今日の消費量</h3>
+                    <p class="stat-value" id="todayConsumption">-- kWh</p>
+                    <p class="stat-change" id="todayChange">--</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-content">
+                    <h3>週間平均</h3>
+                    <p class="stat-value" id="weeklyAverage">-- kWh</p>
+                    <p class="stat-change">過去7日間</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔮</div>
+                <div class="stat-content">
+                    <h3>明日の予測</h3>
+                    <p class="stat-value" id="prediction">-- kWh</p>
+                    <p class="stat-change" id="predictionConfidence">信頼度: --%</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📡</div>
+                <div class="stat-content">
+                    <h3>稼働センサー</h3>
+                    <p class="stat-value" id="activeSensors">--</p>
+                    <p class="stat-change" id="sensorStatus">オンライン: --</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- グラフセクション -->
+        <section class="charts-section">
+            <div class="chart-container">
+                <h2>📈 時間別電力消費量</h2>
+                <canvas id="hourlyChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>📊 日別電力消費量</h2>
+                <canvas id="dailyChart"></canvas>
+            </div>
+        </section>
+
+        <!-- センサー状態セクション -->
+        <section class="sensors-section">
+            <h2>📡 センサー状態</h2>
+            <div class="sensor-grid" id="sensorGrid">
+                <!-- センサーカードはJavaScriptで動的に生成 -->
+            </div>
+        </section>
+
+        <!-- 省エネ推奨セクション -->
+        <section class="recommendations-section">
+            <h2>💡 省エネ推奨アクション</h2>
+            <div class="recommendations-list" id="recommendationsList">
+                <!-- 推奨はJavaScriptで動的に生成 -->
+            </div>
+        </section>
+
+        <!-- 週間予測セクション -->
+        <section class="prediction-section">
+            <h2>🔮 週間電力予測</h2>
+            <div class="chart-container">
+                <canvas id="weeklyPredictionChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <p>© 2025 Smart Building Energy Dashboard - 五百戶科技應徵作品</p>
+        <p>RD/AI Engineer Portfolio Project by I-Ping Lin</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/api.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
